@@ -4,7 +4,7 @@ fire-cat project template
 ## run
 `npm run dev`
 
-## Pack
+## build
 `npm run build`
 
 ## deploy

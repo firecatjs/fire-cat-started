@@ -1,4 +1,17 @@
 {
+  "name": "fire-cat-started",
+  "description": "fire-cat template",
+  "version": "1.0.1",
+  "main": "ecosystem.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jon-Millent/fire-cat-started.git"
+  },
+  "scripts": {
+    "dev": "nodemon",
+    "build": "webpack --config ./build/webpack.build.js --progress",
+    "server": "node ./dist/server.run.js"
+  },
   "dependencies": {
     "dotenv": "^16.0.0",
     "fire-cat": "^1.0.1",
@@ -6,11 +19,6 @@
     "koa-bodyparser": "^4.3.0",
     "koa-logger": "^3.2.1",
     "koa-router": "^10.1.1"
-  },
-  "scripts": {
-    "dev": "nodemon",
-    "build": "webpack --config ./build/webpack.build.js --progress",
-    "server": "node ./dist/server.run.js"
   },
   "devDependencies": {
     "@types/koa": "^2.13.4",
@@ -30,14 +38,6 @@
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2",
     "webpack-node-externals": "^3.0.0"
-  },
-  "name": "fire-cat-started",
-  "description": "fire-cat template",
-  "version": "1.0.0",
-  "main": "ecosystem.config.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Jon-Millent/fire-cat-started.git"
   },
   "keywords": [],
   "author": "",
