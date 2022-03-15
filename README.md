@@ -1,2 +1,11 @@
 # fire-cat-started
-fire-cat template
+fire-cat project template
+
+## run
+`npm run dev`
+
+## Pack
+`npm run build`
+
+## deploy
+`pm2 start ecosystem.config.js`
