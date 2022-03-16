@@ -1066,10 +1066,10 @@ find-up@^4.0.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
-fire-cat@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmmirror.com/fire-cat/-/fire-cat-1.0.1.tgz#d49a30b648366b4b2d0efdae6896fbedfe651d28"
-  integrity sha512-gIUuLwyaHniJSGo67TR5jOcZNeK9x5xgDPqNFuJ4k19I0GvfexJkJbdC3DQ12zlmxhlTxKDr6Xj51fA+DwAzyA==
+fire-cat@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npmmirror.com/fire-cat/-/fire-cat-1.0.2.tgz#7bb8305b444ca821e1ce319eefdab531c1d3cff8"
+  integrity sha512-eywoU7IH//1P8+kfJvWBZKM/QnezlG/yil82BJLbpvEGLf39x8vfZon1vJp5ttItntrXxMWX5vG4/yL79mhqxw==
   dependencies:
     fastest-validator "^1.12.0"
     koa "^2.13.4"
