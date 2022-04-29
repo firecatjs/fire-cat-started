@@ -6,16 +6,21 @@ import config from '@/config';
 import AppEnv from '@/config/env';
 
 const app = new FireCat();
-const log = new FireCatLog();
+const log = new FireCatLog({
+  filename: process.cwd() + '/logs/app.log'
+});
 
-app.koa.on('error', (err)=> {
-  console.log('[ERROR]')
+app.onError = (ctx, err) => {
   console.log(err)
-})
+  log.logError(ctx, err)
+  ctx.body = {
+    success: false,
+    code: 500
+  }
+}
 
 if (config.env.APP_ENV == AppEnv.prod) {
-  app.koa.use(log.action());
-  app.koa.use(log.error());
+  // app.koa.use(log.action());
 }
 
 if (config.env.APP_ENV == AppEnv.dev) {

@@ -1,7 +1,7 @@
 {
   "name": "fire-cat-started",
   "description": "fire-cat template",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "ecosystem.config.js",
   "repository": {
     "type": "git",
