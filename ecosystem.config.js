@@ -6,9 +6,9 @@ module.exports = {
     {
       name,
       script: path.resolve(__dirname, './dist/server.run.js'),
-      instances: require('os').cpus().length,
+      instances: 1 || require('os').cpus().length,
       autorestart: true,
-      watch: true,
+      // watch: true,
       env_production: {
         NODE_ENV: 'prod',
       }
