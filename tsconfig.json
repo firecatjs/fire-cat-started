@@ -6,7 +6,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "target": "ES5",
+    "target": "es6",
     "sourceMap": false,
     "incremental": true,
     "skipLibCheck": true,
