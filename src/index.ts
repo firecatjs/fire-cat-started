@@ -25,6 +25,7 @@ if (config.env.APP_ENV == AppEnv.prod) {
 
 if (config.env.APP_ENV == AppEnv.dev) {
   app.koa.use(logger());
+  fireRouter.enableDocument('/document')
 }
 
 app.koa.use(bodyParser());
