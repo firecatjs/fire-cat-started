@@ -25,7 +25,12 @@ if (config.env.APP_ENV == AppEnv.prod) {
 
 if (config.env.APP_ENV == AppEnv.dev) {
   app.koa.use(logger());
-  fireRouter.enableDocument('/document')
+  fireRouter.enableDocument('/document', {
+    title: '接口文档',
+    description: '这是接口文档',
+    date: '2022-05-20',
+    version: '1.0.0'
+  })
 }
 
 app.koa.use(bodyParser());
