@@ -1,18 +1,16 @@
 import * as bodyParser from 'koa-bodyparser';
 import fireRouter from '@/router';
 const logger = require('koa-logger');
-import {FireCatLog, FireCat} from 'fire-cat';
+import {FireCat} from 'fire-cat';
 import config from '@/config';
 import AppEnv from '@/config/env';
+import {catLog} from "@/log";
 
 const app = new FireCat();
-const log = new FireCatLog({
-  filename: process.cwd() + '/logs/app.log'
-});
 
 app.onError = (ctx, err) => {
   console.log(err)
-  log.logError(ctx, err)
+  catLog.logError(ctx, err)
   ctx.body = {
     success: false,
     code: 500

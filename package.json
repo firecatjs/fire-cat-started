@@ -1,7 +1,7 @@
 {
   "name": "fire-cat-started",
   "description": "fire-cat template",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "ecosystem.config.js",
   "repository": {
     "type": "git",
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "dotenv": "^16.0.0",
-    "fire-cat": "^2.0.3",
+    "fire-cat": "^2.0.5",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
     "koa-logger": "^3.2.1",
