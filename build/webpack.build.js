@@ -11,7 +11,7 @@ const webpackConfig = {
     server: path.join(__dirname, '../src/index.ts')
   },
   output: {
-    filename: '[name].run.js',
+    filename: 'index.js',
     path: path.join(__dirname, '../dist')
   },
   module: {
