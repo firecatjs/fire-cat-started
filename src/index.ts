@@ -9,7 +9,6 @@ import {catLog} from "@/log";
 const app = new FireCat();
 
 app.onError = (ctx, err) => {
-  console.log(err)
   catLog.logError(ctx, err)
   ctx.body = {
     success: false,
