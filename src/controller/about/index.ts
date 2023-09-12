@@ -3,21 +3,21 @@ import {Context} from "fire-cat/lib/types";
 
 export class AboutController extends FireCatController {
 
-  @Get('')
+  @Get('/')
   @Request()
   @ApiDescription('about home page')
   index(ctx: Context) {
     ctx.body = 'welcome to about page'
   }
 
-  @Get('address')
+  @Get('/address')
   @Request()
   @ApiDescription('about address page')
   address(ctx: Context) {
     ctx.body = 'address'
   }
 
-  @Get('news')
+  @Get('/news')
   @Request()
   @ApiDescription('about news page')
   news(ctx: Context) {

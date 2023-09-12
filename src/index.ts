@@ -1,4 +1,3 @@
-import * as bodyParser from 'koa-bodyparser';
 import fireRouter from '@/router';
 const logger = require('koa-logger');
 import {FireCat} from 'fire-cat';
@@ -30,7 +29,6 @@ if (config.env.APP_ENV == AppEnv.dev) {
   })
 }
 
-app.koa.use(bodyParser());
 app.koa.use(fireRouter.router.routes());
 app.koa.listen(config.port);
 
