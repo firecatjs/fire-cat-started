@@ -963,10 +963,10 @@ find-up@^4.0.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
-fire-cat@^2.0.8:
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/fire-cat/-/fire-cat-2.0.8.tgz#427f2ffa3db63b56dda7991386f094c953d1b39a"
-  integrity sha512-/217ikI9yHNesOh21qZ9P36CRH5011mbiwuSUQvQV1MEtRtOztKWTtLFZX/P3ZB9SxwDm56vINhstTvyzViG4A==
+fire-cat@^2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/fire-cat/-/fire-cat-2.0.9.tgz#33584be4a0d2101381a6965721c431d929398cd0"
+  integrity sha512-SMghOFikI3q4+qoImFjpoy8XsLngWCgVtEzG/COqyrLPnlQf9e4CW4+GQiMR8ZX+Fm+XqiTuCqOY2GUWepgjjg==
   dependencies:
     fastest-validator "^1.17.0"
     koa "^2.14.2"

@@ -1,5 +1,4 @@
-import {ApiDescription, FireCatController, Get, Request} from "fire-cat";
-import {Context} from "fire-cat/lib/types";
+import {ApiDescription, Context, FireCatController, Get, Request} from "fire-cat";
 
 export class HomeController extends FireCatController {
 
