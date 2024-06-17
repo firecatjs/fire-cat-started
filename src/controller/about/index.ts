@@ -23,4 +23,11 @@ export class AboutController extends FireCatController {
     ctx.body = 'news'
   }
 
+  @Get('/news/detail/:id')
+  @Request()
+  @ApiDescription('about news detail page')
+  newsDetail(ctx: Context) {
+    ctx.body = 'news'
+  }
+
 }

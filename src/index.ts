@@ -7,13 +7,15 @@ import {catLog} from "@/log";
 
 const app = new FireCat();
 
-app.onError = (ctx, err) => {
+app.koa.on('error', (err, ctx) => {
+  // 可以在这里添加额外的错误处理逻辑，例如记录日志
+  console.log(err)
   catLog.logError(ctx, err)
   ctx.body = {
     success: false,
     code: 500
   }
-}
+});
 
 if (config.env.APP_ENV == AppEnv.prod) {
   // app.koa.use(log.action());
