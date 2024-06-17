@@ -5,7 +5,7 @@
   "main": "ecosystem.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jon-Millent/fire-cat-started.git"
+    "url": "git+https://github.com/firecatjs/fire-cat-started.git"
   },
   "scripts": {
     "dev": "nodemon",
