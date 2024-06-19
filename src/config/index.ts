@@ -1,16 +1,10 @@
-import * as dotenv from 'dotenv';
-import configDev from "@/config/config.dev";
-import configProd from "@/config/config.prod";
-import AppEnv from "@/config/env";
+import appEnv from './env';
 
-const APP_ENV = process.env.APP_ENV
-const mixConfig = APP_ENV == AppEnv.dev ? configDev : configProd
-
-dotenv.config();
+const mixConfig = appEnv.getAppConfig()
 
 export default {
   env: {
-    APP_ENV
+    APP_ENV: appEnv.env
   },
   port: mixConfig.port,
 }

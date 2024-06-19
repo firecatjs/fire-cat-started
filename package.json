@@ -8,14 +8,13 @@
     "url": "git+https://github.com/firecatjs/fire-cat-started.git"
   },
   "scripts": {
-    "dev": "nodemon",
-    "build": "webpack --config ./build/webpack.build.js --progress",
+    "dev": "cross-env APP_ENV=dev nodemon",
+    "build": "cross-env APP_ENV=prod webpack --config ./build/webpack.build.js --progress",
     "build:tree-mode": "rm -rf ./dist/ && tsc && tsc-alias",
     "server": "node ./dist/index.js"
   },
   "dependencies": {
-    "dotenv": "^16.4.5",
-    "fire-cat": "^2.2.2",
+    "fire-cat": "^2.3.1",
     "koa-logger": "^3.2.1"
   },
   "devDependencies": {

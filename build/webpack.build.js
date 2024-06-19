@@ -42,10 +42,8 @@ const webpackConfig = {
   plugins: [
     new CleanWebpackPlugin(),
     new webpack.DefinePlugin({
-      'process.env' : {
-        NODE_ENV: JSON.stringify("production"),
-        APP_ENV: JSON.stringify("prod")
-      },
+      'process.env.NODE_ENV' : JSON.stringify('production'),
+      'process.env.APP_ENV' : JSON.stringify(process.env.APP_ENV),
     }),
   ],
   node: {

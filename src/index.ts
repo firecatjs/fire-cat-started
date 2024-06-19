@@ -2,7 +2,7 @@ import fireRouter from '@/router';
 const logger = require('koa-logger');
 import {FireCat} from 'fire-cat';
 import config from '@/config';
-import AppEnv from '@/config/env';
+import appEnv from '@/config/env';
 import {catLog} from "@/log";
 
 const app = new FireCat();
@@ -17,11 +17,11 @@ app.koa.on('error', (err, ctx) => {
   }
 });
 
-if (config.env.APP_ENV == AppEnv.prod) {
+if (config.env.APP_ENV == appEnv.modes.prod) {
   // app.koa.use(log.action());
 }
 
-if (config.env.APP_ENV == AppEnv.dev) {
+if (config.env.APP_ENV == appEnv.modes.dev) {
   app.koa.use(logger());
   fireRouter.enableDocument('/document', {
     title: '接口文档',
