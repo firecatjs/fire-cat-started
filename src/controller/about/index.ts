@@ -1,6 +1,7 @@
-import {ApiDescription, FireCatController, Get, Request, Context} from "fire-cat";
+import { AppController } from "@/mixin/appController";
+import {ApiDescription, Get, Request, Context} from "fire-cat";
 
-export class AboutController extends FireCatController {
+export class AboutController extends AppController {
 
   @Get('/')
   @Request()

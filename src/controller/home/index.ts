@@ -1,6 +1,10 @@
-import {ApiDescription, Context, FireCatController, Get, Request} from "fire-cat";
+import { AppController } from "@/mixin/appController";
+import {ApiDescription, Context, Get, Request} from "fire-cat";
+import schema from "./schema";
+import { AppVerify } from "@/decorators/appVerify";
 
-export class HomeController extends FireCatController {
+
+export class HomeController extends AppController {
 
   @Get('/')
   @Request()
@@ -11,6 +15,7 @@ export class HomeController extends FireCatController {
 
   @Get('/ping')
   @Request()
+  @AppVerify(schema.test)
   @ApiDescription('ping的页面')
   ping(ctx: Context) {
     ctx.body = 'pang'
