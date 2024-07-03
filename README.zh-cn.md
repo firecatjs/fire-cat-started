@@ -6,16 +6,17 @@
 
 ## 打包
 
-### 正常模式打包
-打包成单个服务文件
 `npm run build`
 
-### 目录详细形式打包
+输出
 
-打包成目录结构
-
-`npm run build:tree-mode`
-
+```bash
+dist
+└── service
+   └──index.js
+├── ecosystem.config.js
+└── package.json
+```
 ## 部署
 
 ### 使用 pm2 部署

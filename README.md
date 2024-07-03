@@ -6,13 +6,17 @@ FireCat Project Template
 
 ## Build
 
-### Normal build
-packaged into a single service file  
 `npm run build`
 
-### Tree mode build
-packaged into a directory structure  
-`npm run build:tree-mode`
+output
+
+```bash
+dist
+└── service
+   └──index.js
+├── ecosystem.config.js
+└── package.json
+```
 
 ## Deploy
 ### Deploy by pm2
