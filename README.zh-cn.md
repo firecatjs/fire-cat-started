@@ -12,8 +12,10 @@
 
 ```bash
 dist
-└── service
+└── app
+   ├──...
    └──index.js
+├── .env
 ├── ecosystem.config.js
 └── package.json
 ```
