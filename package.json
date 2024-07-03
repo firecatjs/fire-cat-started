@@ -8,12 +8,12 @@
     "url": "git+https://github.com/firecatjs/fire-cat-started.git"
   },
   "scripts": {
-    "dev": "cross-env APP_ENV=dev nodemon",
-    "build": "cross-env APP_ENV=prod webpack --config ./build/webpack.build.js --progress",
-    "build:tree-mode": "rm -rf ./dist/ && tsc && tsc-alias",
-    "server": "node ./dist/index.js"
+    "dev": "dotenv -e .dev.env nodemon",
+    "build": "dotenv -e .prod.env gulp",
+    "server": "dotenv -e .env node ./app/index.js"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "fire-cat": "^2.3.3",
     "koa-logger": "^3.2.1"
   },
@@ -21,19 +21,17 @@
     "@types/koa": "^2.15.0",
     "@types/koa-logger": "^3.1.5",
     "@types/node": "^20.14.9",
-    "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^12.0.2",
-    "cross-env": "^7.0.3",
+    "del": "^7.1.0",
+    "dotenv-cli": "^7.4.2",
+    "fs-extra": "^11.2.0",
+    "gulp": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-shell": "^0.8.0",
     "nodemon": "^3.1.4",
-    "terser-webpack-plugin": "^5.3.10",
-    "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
     "tsc-alias": "^1.8.10",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.5.2",
-    "webpack": "^5.92.1",
-    "webpack-cli": "^5.1.4",
-    "webpack-node-externals": "^3.0.0"
+    "typescript": "^5.5.2"
   },
   "keywords": [],
   "author": "",

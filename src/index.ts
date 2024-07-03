@@ -4,6 +4,9 @@ import {FireCat} from 'fire-cat';
 import config from '@/config';
 import appEnv from '@/config/env';
 import {catLog} from "@/log";
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = new FireCat();
 
