@@ -1,18 +1,37 @@
 # fire-cat-started
-fire-cat 项目模板
+项目模板
 
-## 运行
+## 启动
 `npm run dev`
 
 ## 打包
-### 普通 build
-打包成单个运行文件  
+
+### 正常模式打包
+打包成单个服务文件
 `npm run build`
 
-### tree mode build
-打包成和原来src目录一样的结构文件  
+### 目录详细形式打包
+
+打包成目录结构
+
 `npm run build:tree-mode`
 
-
 ## 部署
-`pm2 start ecosystem.config.js`
+
+### 使用 pm2 部署
+
+```bash
+cd dist
+
+yarn
+
+pm2 start ecosystem.config.js
+```
+
+### 使用docker部署
+
+```bash
+docker build -t your-app-name .
+
+docker run -p 3000:3000 your-app-name
+```

@@ -7,14 +7,15 @@ fire-cat project template
 ## build
 
 ### normal build
-packaged into a single file  
+packaged into a single service file  
 `npm run build`
 
 ### tree mode build
 packaged into a directory structure  
 `npm run build:tree-mode`
 
-## deploy by pm2
+## deploy
+### deploy by pm2
 
 ```bash
 cd dist
@@ -24,7 +25,7 @@ yarn
 pm2 start ecosystem.config.js
 ```
 
-## deploy by docker
+### deploy by docker
 
 ```bash
 docker build -t your-app-name .
