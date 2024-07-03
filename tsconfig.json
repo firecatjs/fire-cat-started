@@ -18,7 +18,7 @@
     "noUnusedLocals": false,
     "noLib": false,
     "useUnknownInCatchVariables": false,
-    "outDir": "./dist",
+    "outDir": "./dist/app/",
     "baseUrl": "./",
     "allowJs": true,
     "paths": {

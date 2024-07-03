@@ -4,10 +4,10 @@ WORKDIR /app
 
 COPY dist/package.json ./
 
-RUN npm install --production
+RUN npm install
 
 COPY dist ./
 
 EXPOSE 3000
 
-CMD ["node", "./service/index.js"]
+CMD ["npm", "run", "server"]
