@@ -3,6 +3,9 @@ const webpack = require('webpack')
 const nodeExternals = require('webpack-node-externals')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const TerserPlugin = require("terser-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+const distDir = path.resolve(__dirname, '../dist')
 
 const webpackConfig = {
   target: 'node',
@@ -12,7 +15,7 @@ const webpackConfig = {
   },
   output: {
     filename: 'index.js',
-    path: path.join(__dirname, '../dist')
+    path: path.join(__dirname, '../dist/service')
   },
   module: {
     rules: [
@@ -21,7 +24,7 @@ const webpackConfig = {
         use: {
           loader: 'babel-loader'
         },
-        include: path.join(__dirname, '../src')
+        include: path.join(__dirname, '../src'),
       },
       {
         test: /\.ts?$/,
@@ -40,10 +43,21 @@ const webpackConfig = {
   },
   externals: [nodeExternals()],
   plugins: [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: [
+        '**/*',
+        distDir
+      ]
+    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV' : JSON.stringify('production'),
       'process.env.APP_ENV' : JSON.stringify(process.env.APP_ENV),
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'package.json', to: distDir },
+        { from: 'ecosystem.config.js', to: distDir },
+      ]
     }),
   ],
   node: {
