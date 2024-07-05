@@ -8,7 +8,7 @@ export class HomeController extends AppController {
   @Get('/')
   @Request()
   @ApiDescription('首页')
-  index(ctx: Context) {
+  async index(ctx: Context) {
     ctx.body = 'hello world'
   }
 
