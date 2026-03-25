@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "dotenv": "^17.2.3",
-    "fire-cat": "^2.4.1",
+    "fire-cat": "^3.0.0",
     "koa-logger": "^4.0.0"
   },
   "devDependencies": {
